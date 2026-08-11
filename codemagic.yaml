@@ -14,20 +14,4 @@ workflows:
           ./gradlew assembleDebug
 
     artifacts:
-      - android/app/build/outputs/apk/debug/*.apkworkflows:
-  android-debug:
-    name: ExtremeAlarm Android APK
-    max_build_duration: 60
-
-    environment:
-      java: 17
-
-    scripts:
-      - name: Build APK
-        script: |
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug
-
-    artifacts:
       - android/app/build/outputs/apk/debug/*.apk
